@@ -6,7 +6,7 @@
        
         <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />	
 
-        <title>Laravel</title>
+        <title>Progressive web apps</title>
 
         <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">   
