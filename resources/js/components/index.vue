@@ -159,17 +159,48 @@
 				</div>
 				<div class="clear"> </div>
 			</div>
-		</div>
+        </div>
+
+
+
+
+     
+
+
+
 		<div class="clear"> </div>
 				<p class="footer-class-in">Copyright © 2020  by
 					  <a href="http://henrymoby.tech/" target="_blank">henrymoby</a> </p>
 
 	</div>
 
+
+    
    </div>
 </template>
 
 
 <style scoped>
 
+
 </style>
+
+
+<script>
+    export default {
+    
+      data: () => ({
+        
+      
+
+      }),
+
+      methods: {
+     
+        myBtn(){
+           // modal.style.display = "block";
+        }
+
+      }
+    }
+  </script>
