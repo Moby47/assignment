@@ -99,23 +99,17 @@
 				<div class="grid-single">
 					<div class="your-single">
 						<i> </i>
-						<input type="text" value="Name" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Name';}">								
+						<input type="text" value="Name" required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Name';}">								
 						<div class="clear"> </div>
 					</div>
 					<div class="your-single">
 						<i class="email"> </i>
-						<input type="text" value="E-mail" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'E-mail';}">								
+						<input type="text" value="E-mail" required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'E-mail';}">								
 						<div class="clear"> </div>
-					</div>
-					<div class="your-single">
-						<i class="website"> </i>
-						<input type="text" value="Website" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Website';}">								
-						<div class="clear"> </div>
-					</div>
-					
+					</div>					
 				</div>
 				<div class="grid-single-in">
-					<textarea cols="77" rows="5" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+					<textarea cols="77" rows="5" value=" " required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
 					<input type="submit" value="SENT MESSAGE">
 				</div>
 				<div class="clear"> </div>

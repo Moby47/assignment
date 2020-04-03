@@ -2090,12 +2090,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -19872,6 +19866,7 @@ var staticRenderFns = [
                       attrs: {
                         type: "text",
                         value: "Name",
+                        required: "",
                         onfocus: "this.value='';",
                         onblur: "if (this.value == '') {this.value = 'Name';}"
                       }
@@ -19887,24 +19882,9 @@ var staticRenderFns = [
                       attrs: {
                         type: "text",
                         value: "E-mail",
+                        required: "",
                         onfocus: "this.value='';",
                         onblur: "if (this.value == '') {this.value = 'E-mail';}"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "clear" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "your-single" }, [
-                    _c("i", { staticClass: "website" }),
-                    _vm._v(" "),
-                    _c("input", {
-                      attrs: {
-                        type: "text",
-                        value: "Website",
-                        onfocus: "this.value='';",
-                        onblur:
-                          "if (this.value == '') {this.value = 'Website';}"
                       }
                     }),
                     _vm._v(" "),
@@ -19920,6 +19900,7 @@ var staticRenderFns = [
                         cols: "77",
                         rows: "5",
                         value: " ",
+                        required: "",
                         onfocus: "this.value='';",
                         onblur:
                           "if (this.value == '') {this.value = 'Message';}"
