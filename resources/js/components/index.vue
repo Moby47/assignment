@@ -155,23 +155,25 @@
               <div class="modal">
                 <div class="top-single">
                     <h3>Leave a Comment</h3>
+                    <form>
                     <div class="grid-single">
                         <div class="your-single">
                             <i> </i>
-                            <input type="text" value="Name" required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Name';}">								
+                            <input type="text" value="Name" v-model='Name' required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Name';}">								
                             <div class="clear"> </div>
                         </div>
                         <div class="your-single">
                             <i class="email"> </i>
-                            <input type="text" value="E-mail" required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'E-mail';}">								
+                            <input type="text" value="E-mail" v-model='Email' required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'E-mail';}">								
                             <div class="clear"> </div>
                         </div>					
                     </div>
                     <div class="grid-single-in">
-                        <textarea cols="77" rows="5" value=" " required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
-                        <input type="submit" value="SENT MESSAGE">
+                        <textarea cols="77" rows="5" value=" " v-model='Message' required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+                        <input type="submit" value="SENT MESSAGE" @click.prevent='send()'>
                     </div>
                     <div class="clear"> </div>
+                </form>
                 </div>
               </div>
           
@@ -291,14 +293,24 @@ opacity: 1;
     
       data: () => ({
         
-      
+      Name:'',
+      Email:'',
+      Message:''
 
       }),
 
       methods: {
      
-        myBtn(){
-           // modal.style.display = "block";
+        send(){
+           if(this.Name == ''){
+               alert('Please enter a name')
+           }else if(this.Email == ''){
+            alert('Please enter an email')
+           }else if(this.Message == ''){
+            alert('Please enter a message')
+           }else{
+            alert('Comment posted')
+           }
         }
 
       }
