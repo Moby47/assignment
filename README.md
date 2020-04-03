@@ -1,7 +1,8 @@
 Clone.
 install composer (composer install)
-install npm (npm install)
-start laravel server (php artisan serve)
+<br><br>
+install npm (npm install)<br><br>
+start laravel server (php artisan serve)<br><br>
 start vue server (npm run watch)
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
