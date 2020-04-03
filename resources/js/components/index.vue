@@ -96,21 +96,9 @@
 				</div>
 				<div class="top-single">
 				<h3>Leave a Comment</h3>
-				<div class="grid-single">
-					<div class="your-single">
-						<i> </i>
-						<input type="text" value="Name" required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Name';}">								
-						<div class="clear"> </div>
-					</div>
-					<div class="your-single">
-						<i class="email"> </i>
-						<input type="text" value="E-mail" required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'E-mail';}">								
-						<div class="clear"> </div>
-					</div>					
-				</div>
+				
 				<div class="grid-single-in">
-					<textarea cols="77" rows="5" value=" " required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
-					<input type="submit" value="SENT MESSAGE">
+					<a class='send' href="#greeting-modal">OK</a>
 				</div>
 				<div class="clear"> </div>
 			</div>
@@ -157,7 +145,40 @@
 
 
 
-
+        <div id="app">
+            <!-- Modal container -->
+            <div 
+              class="modal-container" 
+              id="greeting-modal">
+          
+              <!-- Modal  -->
+              <div class="modal">
+                <div class="top-single">
+                    <h3>Leave a Comment</h3>
+                    <div class="grid-single">
+                        <div class="your-single">
+                            <i> </i>
+                            <input type="text" value="Name" required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Name';}">								
+                            <div class="clear"> </div>
+                        </div>
+                        <div class="your-single">
+                            <i class="email"> </i>
+                            <input type="text" value="E-mail" required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'E-mail';}">								
+                            <div class="clear"> </div>
+                        </div>					
+                    </div>
+                    <div class="grid-single-in">
+                        <textarea cols="77" rows="5" value=" " required onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+                        <input type="submit" value="SENT MESSAGE">
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+              </div>
+          
+              <!-- Background, click to close -->
+              <a href="#" class="modal-bg"></a>
+            </div>
+          </div>
      
 
 
@@ -176,7 +197,92 @@
 
 <style scoped>
 
+body {
+  font-family: Lato;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+/* Greeting Modal Container */
+#greeting-modal {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Greeting Modal Container - when open */
+#greeting-modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Greeting Modal */
+#greeting-modal .modal {
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-delay: .2s;
+}
+
+/* Greeting Modal - when open */
+#greeting-modal:target .modal {
+transform: translateY(0);
+opacity: 1;
+}
+
+/* Modal Container Styles */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Background Styles */
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+/* Modal Body Styles */
+.modal {
+  z-index: 1;
+  background-color: white;
+  width: 80%;
+  max-width: 500px;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.send{
+    width: 100%;
+    font-size: 1.1em;
+    background: #1ab5b3;
+    padding: .2em 1em;
+    text-align: center;
+    color: #fff;
+    border: none;
+    outline: 0;
+    margin: 0 auto;
+    -webkit-appearance: none;
+    font-weight: 700;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    -moz-transition: .5s all;
+    cursor: pointer;
+}
 </style>
 
 
